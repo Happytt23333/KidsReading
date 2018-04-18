@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.light.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Loginactivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ReadingActivity" />
+        <activity android:name=".AddingActivity" />
+        <activity android:name=".CommunityActivity" />
+        <activity android:name=".ShoppingActivity" />
+        <activity android:name=".ShudanActivit" />
+        <activity android:name=".readingplanActivity" />
+        <activity android:name=".Readingplan_two" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".GameActivity" />
+        <activity android:name=".LeaderActivity" />
+        <activity android:name=".GexingActivity" />
+        <activity android:name=".ShufangActivity" />
+        <activity android:name=".RecordingActivity" />
+        <activity android:name=".GexingActivity_two"></activity>
+    </application>
+
+</manifest>

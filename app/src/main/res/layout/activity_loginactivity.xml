@@ -5,11 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.light.myapplication.Loginactivity">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:id="@+id/scrollView3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,23 +14,24 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-        <TextView
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="            我的宝贝"
-        android:textSize="20sp"
-            android:layout_weight="8"
-        android:gravity="center"
-            android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:background="#55BBCA"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:text="            我的宝贝"
+                android:textSize="20sp"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#55BBCA"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="2"
-                android:text="完成"
+                android:text="登录"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="#ffffff"
@@ -43,49 +39,48 @@
                 android:id="@+id/wancheng"/>
         </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_below="@+id/scrollView3"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:text="昵称"
-            android:textSize="16sp"
-            android:layout_weight="1"
-            android:layout_marginTop="11dp"
-            android:textStyle="bold" />
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_weight="5"
-        android:text="宝贝昵称"
-        android:textColor="#AAAA"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/scrollView2"
-        android:layout_centerHorizontal="true" />
-    </LinearLayout>
-    <View
-        android:layout_width="270dp"
-        android:layout_height="2dp"
-        android:background="#C0C0C0"
-        android:layout_gravity="center"
-        />
+         <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_centerHorizontal="true">
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="30dp"
+                 android:text="昵称"
+                 android:textSize="16sp"
+                 android:layout_weight="1"
+                 android:layout_marginTop="11dp"
+                 android:textStyle="bold" />
+
+             <EditText
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:inputType="textPersonName"
+                 android:layout_weight="5"
+                 android:hint="宝贝昵称"
+                 android:ems="10"
+                 android:layout_marginTop="11dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_below="@+id/scrollView3"
+                 android:layout_centerHorizontal="true" />
+         </LinearLayout>
+        <View
+            android:layout_width="270dp"
+            android:layout_height="2dp"
+            android:background="#C0C0C0"
+            android:layout_gravity="center" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/scrollView3"
             android:layout_centerHorizontal="true">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="30dp"
@@ -99,8 +94,6 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:layout_below="@+id/scrollView2"
-                android:layout_alignParentStart="true"
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="11dp"
                 android:id="@+id/button"
@@ -110,8 +103,6 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:layout_below="@+id/scrollView2"
-                android:layout_alignParentStart="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="11dp"
                 android:id="@+id/button2"
@@ -122,50 +113,47 @@
             android:layout_height="2dp"
             android:background="#C0C0C0"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_below="@+id/scrollView3"
             android:layout_centerHorizontal="true">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:text="生日"
+                android:text="年龄"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:layout_marginTop="11dp"
                 android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:layout_weight="5"
-                android:text="宝贝生日"
-                android:textColor="#AAAA"
+                android:hint="宝贝年龄"
                 android:ems="10"
                 android:layout_marginTop="11dp"
                 android:layout_marginLeft="15dp"
-                android:id="@+id/editText3"
-                android:layout_below="@+id/scrollView2"
                 android:layout_centerHorizontal="true" />
         </LinearLayout>
         <View
             android:layout_width="270dp"
             android:layout_height="2dp"
             android:background="#C0C0C0"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/scrollView3"
             android:layout_centerHorizontal="true">
             <TextView
                 android:layout_width="0dp"
@@ -180,8 +168,6 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:layout_below="@+id/scrollView2"
-                android:layout_alignParentStart="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="11dp"
                 android:id="@+id/button3"
@@ -191,22 +177,9 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:layout_below="@+id/scrollView2"
-                android:layout_alignParentStart="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="11dp"
                 android:id="@+id/button4"
-                android:background="@drawable/shape_tianjia"/>
-            <Button
-                android:text="其他"
-                android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:layout_below="@+id/scrollView2"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="11dp"
-                android:id="@+id/button5"
                 android:background="@drawable/shape_tianjia"/>
         </LinearLayout>
         <View
@@ -214,10 +187,40 @@
             android:layout_height="2dp"
             android:background="#C0C0C0"
             android:layout_marginTop="10dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            />
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="密码"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_marginTop="11dp"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_weight="5"
+                android:hint="请输入密码"
+                android:ems="10"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <View
+            android:layout_width="270dp"
+            android:layout_height="2dp"
+            android:background="#C0C0C0"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center" />
+
     </LinearLayout>
-    </ScrollView>
-
-
 </RelativeLayout>

@@ -63,18 +63,44 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
 
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="托马斯和朋友时间..."
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="18sp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:text="托马斯和朋友时间..."
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:textSize="18sp"/>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
                     </LinearLayout>
 
                     <TextView
@@ -104,18 +130,45 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
 
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="早上/我的一天"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="18sp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:text="早上/我的一天"
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:textSize="18sp"/>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
                     </LinearLayout>
 
                     <TextView
@@ -145,19 +198,43 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
 
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="不要随便否定自己"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="18sp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:text="不要随便否定自己"
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:textSize="18sp"/>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
 
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
                     </LinearLayout>
 
                     <TextView
@@ -187,18 +264,43 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
 
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="玛修的梦"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="18sp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:text="玛修的梦"
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:textSize="18sp"/>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
                     </LinearLayout>
 
                     <TextView
@@ -228,18 +330,44 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
 
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="不要随便否定自己"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="18sp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:text="不要随便否定自己"
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:textSize="18sp"/>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
                     </LinearLayout>
 
                     <TextView
@@ -276,6 +404,38 @@
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:text="厌食挑食"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="做事拖拉"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_gravity="center"
+                            android:text="作息不规律"
+                            android:textSize="10sp"
+                            android:background="@drawable/gray"/>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"

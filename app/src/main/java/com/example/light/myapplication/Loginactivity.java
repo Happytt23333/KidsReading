@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import okhttp3.FormBody;
-import okhttp3.RequestBody;
 import org.json.JSONObject;
+
+import java.io.IOException;
+
 
 public class Loginactivity extends AppCompatActivity {
     private EditText username;
@@ -33,17 +36,24 @@ public class Loginactivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RequestBody requestLogin = new FormBody.Builder()
-                        .add("username",username.getText().toString())
-                        .add("password",password.getText().toString()).
-                                build();
-                String url = "/user";
-                OkhttpConnection okhttpConnection = new OkhttpConnection();
-                JSONObject jsonObject = okhttpConnection.getData(url);
-
-                Intent intent = new Intent(Loginactivity.this,MainActivity.class);
-                startActivity(intent);
+                new Thread(downloadRun).start();
             }
+            /**
+             * 下载线程
+             */
+            Runnable downloadRun = new Runnable(){
+                @Override
+                public void run() {
+                    // TODO Auto-generated method stub
+                    OkhttpConnection okhttpConnection = new OkhttpConnection();
+                    try {
+                        String json = okhttpConnection.get("/hello");
+                        Log.i("Baobaoyue",json);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
         });
     }
 }

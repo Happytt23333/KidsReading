@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -26,9 +27,19 @@ import okhttp3.ResponseBody;
  */
 
 public class OkhttpConnection {
-    public String baseurl = "https://172.17.0.16";
+    public String baseurl = "http://122.152.218.100:5000";
     public String result;
     public RequestBody requestBody;
+    public final static int CONNECT_TIMEOUT = 60;
+    public final static int READ_TIMEOUT = 100;
+    public final static int WRITE_TIMEOUT = 60;
+    public static final OkHttpClient client = new OkHttpClient.Builder()
+            .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)//设置读取超时时间
+            .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)//设置写的超时时间
+            .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)//设置连接超时时间
+            .build();
+
+    public String getBaseurl(){return this.baseurl;}
 
     public void setResult(String re){
         this.result = re;
@@ -45,68 +56,29 @@ public class OkhttpConnection {
     }
     public OkhttpConnection(){}
 
-    public JSONObject postData(final String url){
-        try{
-            OkHttpClient client = new OkHttpClient();
-            RequestBody requestBody=getRequestBody();
-            Request request = new Request.Builder().url(baseurl+url).post(requestBody).build();
-            Call call = client.newCall(request);
-            call.enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    Log.i("okhttp","fail"+e);
-                }
-
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    if(response.isSuccessful()){
-                        setResult(response.body().string());
-                    }
-                }
-            });
-        }catch(Exception e){
-            e.printStackTrace();
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    public String post(String url, String json) throws IOException {
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(baseurl+url)
+                .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
         }
-
-        JSONObject resp=new JSONObject();
-        try {
-            resp = new JSONObject(getResult());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return resp;
     }
 
-    public JSONObject getData(final String url){
-        try{
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder().url(baseurl+url).build();
-            Call call = client.newCall(request);
-            call.enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    Log.i("okhttp","fail"+e);
-                }
-
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    Log.i("okhttp","sucess");
-                    if(response.isSuccessful()){
-                        setResult(response.body().string());
-                    }
-                }
-            });
-        }catch(Exception e){
-            e.printStackTrace();
+    public String get(String url) throws IOException {
+        Request request = new Request.Builder().url(baseurl+url).get().build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
         }
-
-        JSONObject resp=new JSONObject();
-        try {
-            resp = new JSONObject(getResult());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return resp;
     }
 
     public Message getImage(String url){

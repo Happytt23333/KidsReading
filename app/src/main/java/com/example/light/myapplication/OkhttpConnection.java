@@ -57,11 +57,27 @@ public class OkhttpConnection {
     public OkhttpConnection(){}
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
     public String post(String url, String json) throws IOException {
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
                 .url(baseurl+url)
                 .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
+    public String post(String url, String json, String header) throws IOException {
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(baseurl+url)
+                .post(body)
+                .addHeader("user token",header)
                 .build();
         Response response = client.newCall(request).execute();
         if (response.isSuccessful()) {

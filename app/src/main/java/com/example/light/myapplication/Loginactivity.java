@@ -13,8 +13,10 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 
 public class Loginactivity extends AppCompatActivity {
@@ -84,12 +86,22 @@ public class Loginactivity extends AppCompatActivity {
     }
 
     private void writeFiles(String string){
+        FileOutputStream out = null;
+        BufferedWriter writer = null;
         try{
-            FileOutputStream outputStream = openFileOutput("UserInfo", Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
-            outputStream.close();
-        }catch(Exception e){
+            out  = openFileOutput("userInfo",Context.MODE_PRIVATE);
+            writer = new BufferedWriter(new OutputStreamWriter(out));
+            writer.write(string);
+        }catch(IOException e){
             e.printStackTrace();
+        }finally {
+            try{
+                if(writer != null){
+                    writer.close();
+                }
+            }catch(IOException e){
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -64,9 +64,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_eyu"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="托马斯和朋友时间..."
+                        android:text="鳄鱼莱莱"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -80,7 +81,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="3-6岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -89,7 +90,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="人际交往"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -98,7 +99,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="不合群"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                     </LinearLayout>
@@ -108,7 +109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:lines="2"
-                        android:text="《不要随便否定自己》——如果跟别人不一样，你能充满自信的做自己吗？小羊的一只耳朵是柠檬....."/>
+                        android:text="鳄鱼莱莱和温暖先生生活在一座大房里，浴缸就是他的床。莱莱很聪明，也很友好，喜欢做家务，也喜欢跟孩子们玩耍。但是，他和邻居牢骚先生总是矛盾不断，最终他凭着积极的态度和无畏的勇气，化解了问题"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -131,9 +132,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_no"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="早上/我的一天"
+                        android:text="不/不行"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -147,7 +149,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="3-6岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -156,7 +158,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="人际交往"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -165,7 +167,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="不合群"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -176,7 +178,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:lines="2"
-                        android:text="《不要随便否定自己》——如果跟别人不一样，你能充满自信的做自己吗？小羊的一只耳朵是柠檬....."/>
+                        android:text="上幼儿园的小熊奥克塔，无论是妈妈说带他去学校，还是同学邀请他一起玩，他总是喜欢说“不，不行”。但在老师和小朋友们的帮助下，奥克塔终于和大家成为了好朋友。"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -199,9 +201,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_can"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="不要随便否定自己"
+                        android:text="凯，能行"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -215,7 +218,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="3-6岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -224,7 +227,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="性格养成"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                         <Button
@@ -232,7 +235,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="胆小怕事"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                     </LinearLayout>
@@ -242,7 +245,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:lines="2"
-                        android:text="《不要随便否定自己》——如果跟别人不一样，你能充满自信的做自己吗？小羊的一只耳朵是柠檬....."/>
+                        android:text="这是一本培养孩子乐观情绪、帮助孩子建立自信心的魔法绘本，相比于批评教育，父母应该更加懂得夸奖和鼓励的作用。"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -265,9 +268,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_black"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="玛修的梦"
+                        android:text="蜡笔小黑"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -281,7 +285,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="3-6岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -290,7 +294,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="品德品格"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                         <Button
@@ -298,7 +302,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="胆小怕事"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                     </LinearLayout>
@@ -308,7 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:lines="2"
-                        android:text="《不要随便否定自己》——如果跟别人不一样，你能充满自信的做自己吗？小羊的一只耳朵是柠檬....."/>
+                        android:text="本书采用拟人化的方式，通过蜡笔颜色的特征，说明了没有哪种颜色是无用的，不同颜色用在不同的地方，都能有出色的表现。同时蕴涵了人人都各有所用的道理，可以帮助孩子培养自信心。"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -331,9 +335,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_face"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="不要随便否定自己"
+                        android:text="脸  各种各样的脸"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -347,7 +352,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="0-3岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -356,7 +361,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="品德品格"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -365,7 +370,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="乱发脾气"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                     </LinearLayout>
@@ -375,7 +380,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:lines="2"
-                        android:text="《不要随便否定自己》——如果跟别人不一样，你能充满自信的做自己吗？小羊的一只耳朵是柠檬....."/>
+                        android:text="婴儿从2~3个月大就开始喜欢看人脸图案，到了9个月大，婴儿的社会交往和社会情绪也开始发展。阅读本书，能够给婴儿带来阅读的乐趣，同时也有利于帮助婴儿识别各种脸部的情绪变化，促进其社会交往技能的发展。"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -386,7 +391,6 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/Shufang_eyu"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
                     android:src="@drawable/eyulailai" />
@@ -398,9 +402,10 @@
                     android:layout_gravity="center">
 
                     <TextView
+                        android:id="@+id/shufang_grass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="鳄鱼莱莱"
+                        android:text="草丛里有什么"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>
@@ -414,7 +419,7 @@
                             android:layout_width="60dp"
                             android:layout_height="27dp"
                             android:layout_gravity="center"
-                            android:text="厌食挑食"
+                            android:text="0-3岁"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -423,7 +428,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="做事拖拉"
+                            android:text="科普/百科"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
 
@@ -432,7 +437,7 @@
                             android:layout_height="27dp"
                             android:layout_marginLeft="15dp"
                             android:layout_gravity="center"
-                            android:text="作息不规律"
+                            android:text="自然事物"
                             android:textSize="10sp"
                             android:background="@drawable/gray"/>
                     </LinearLayout>
@@ -442,7 +447,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:lines="2"
-                        android:text="鳄鱼莱莱和温暖先生生活在一座大房里，鱼缸就是他的床。莱莱很聪明，也很友好，喜欢做家务..."/>
+                        android:text="让孩子对草丛里的动物的认知更细致，并且对动物的局部特征也进行了精彩的内容策划，让孩子对于动物的认知更深入"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

@@ -6,13 +6,50 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class GexingActivity extends AppCompatActivity {
     int flag = 0;
+    String username;
+    StringBuilder content1 = new StringBuilder();
+    StringBuilder content2 = new StringBuilder();
+    StringBuilder content3 = new StringBuilder();
+    JSONObject userRead;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gexing);
+
+        try{
+            userRead = new JSONObject(read());
+            username = userRead.getString("username");
+            content1.append(username);
+            content1.append("目前的认知能力（识字量）：");
+            content1.append(userRead.getString("ablityOne"));
+            content2.append(username);
+            content2.append("目前的理解能力（内容理解）：");
+            content2.append(userRead.getString("ablityTwo"));
+            content3.append(username);
+            content3.append("目前的迁移能力（生活运用）：");
+            content3.append(userRead.getString("ablityThree"));
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+
+        TextView abilityOne = (TextView)findViewById(R.id.ability_one);
+        abilityOne.setText(content1);
+        TextView abilityTwo = (TextView)findViewById(R.id.ability_two);
+        abilityTwo.setText(content2);
+        TextView abilityThree = (TextView)findViewById(R.id.ability_three);
+        abilityThree.setText(content2);
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null ){
@@ -490,5 +527,30 @@ public class GexingActivity extends AppCompatActivity {
         button.setBackgroundResource(R.drawable.gray);
         int color = getResources().getColor(R.color.black);
         button.setTextColor(color);
+    }
+
+    private String read(){
+        FileInputStream in = null;
+        BufferedReader reader = null;
+        StringBuilder content = new StringBuilder();
+        try{
+            in = openFileInput("userInfo");
+            reader = new BufferedReader(new InputStreamReader(in));
+            String line = "";
+            while((line = reader.readLine())!=null){
+                content.append(line);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+            if(reader != null){
+                try{
+                    reader.close();
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        return content.toString();
     }
 }

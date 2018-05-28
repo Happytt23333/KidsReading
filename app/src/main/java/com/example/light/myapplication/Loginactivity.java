@@ -65,7 +65,7 @@ public class Loginactivity extends AppCompatActivity {
                             String status = out.getString("status");
                             if ( status.equals("true")){
                                 try{
-                                    String userInfo = okhttpConnection.post("/login",json.toString(),token);
+                                    String userInfo = okhttpConnection.get("/user",token);
                                     Log.i("Baobaoyue2",userInfo);
                                     writeFiles(userInfo);
                                 }catch(IOException e){

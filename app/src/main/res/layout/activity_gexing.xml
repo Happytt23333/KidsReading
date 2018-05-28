@@ -426,23 +426,25 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/ability_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="xxx目前的认知能力（识字量）：中上水平"/>
+                    android:layout_gravity="center" />
 
                 <TextView
+                    android:id="@+id/ability_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="xxx目前的理解能力（内容理解）：平均水平"/>
+                    android:layout_marginTop="5dp" />
+
                 <TextView
+                    android:id="@+id/ability_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="xxx目前的迁移能力（生活运用）：平均水平"/>
+                    android:layout_marginTop="5dp"/>
+
             </LinearLayout>
 
             <Button

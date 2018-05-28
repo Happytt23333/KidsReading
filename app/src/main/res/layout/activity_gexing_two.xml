@@ -62,7 +62,6 @@
                         android:id="@+id/shuming"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="不，不行！"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:textSize="18sp"/>

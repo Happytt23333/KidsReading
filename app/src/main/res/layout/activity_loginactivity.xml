@@ -56,6 +56,7 @@
                  android:textStyle="bold" />
 
              <EditText
+                 android:id="@+id/login_username"
                  android:layout_width="0dp"
                  android:layout_height="wrap_content"
                  android:inputType="textPersonName"
@@ -64,7 +65,6 @@
                  android:ems="10"
                  android:layout_marginTop="11dp"
                  android:layout_marginLeft="15dp"
-                 android:layout_below="@+id/scrollView3"
                  android:layout_centerHorizontal="true" />
          </LinearLayout>
         <View
@@ -132,9 +132,10 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/login_age"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:layout_weight="5"
                 android:hint="宝贝年龄"
                 android:ems="10"
@@ -204,7 +205,9 @@
                 android:layout_weight="1"
                 android:layout_marginTop="11dp"
                 android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/login_pwd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"

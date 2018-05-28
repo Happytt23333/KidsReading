@@ -74,9 +74,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
-                android:layout_gravity="center"
-                android:text="2018-04-01" />
+                android:layout_marginLeft="250dp"
+                android:layout_gravity="center"/>
 
             <ImageView
                 android:layout_width="20dp"
@@ -91,41 +90,14 @@
             android:background="#C0C0C0"
             android:layout_gravity="center" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/record_bookname"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="60dp"
-                android:src="@drawable/eyulailai" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="鳄鱼莱莱"
-                    android:textStyle="bold"
-                    android:textColor="#000"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lines="2"
-                    android:text="鳄鱼莱莱和温暖先生生活在一座大房里，鱼缸就是他的床。莱莱很聪明，也很友好，喜欢做家务..."/>
-            </LinearLayout>
-        </LinearLayout>
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18sp"/>
 
         <View
             android:layout_width="360dp"
@@ -174,7 +146,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/text_one"
+                            android:id="@+id/question_title1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -184,28 +156,24 @@
                             android:orientation="horizontal"
                             android:layout_marginTop="10dp">
                             <RadioButton
-                                android:text="A.没有"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:id="@+id/radioButton1" />
+                                android:id="@+id/title1_answerA" />
                             <RadioButton
-                                android:text="B.少量"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:id="@+id/radioButton2" />
+                                android:id="@+id/title1_answerB" />
                             <RadioButton
-                                android:text="C.大量"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:id="@+id/radioButton3" />
+                                android:id="@+id/title1_answerC" />
                         </LinearLayout>
 
                     </LinearLayout>
                 </LinearLayout>
-
                 <View
                     android:layout_width="360dp"
                     android:layout_height="2dp"
@@ -231,35 +199,32 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/text_two"
+                            android:id="@+id/question_title2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                         <RadioButton
-                            android:text="A.和朋友一起玩"
+                            android:id="@+id/title2_answerA"
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:id="@+id/radioButton6" />
+                            android:layout_height="30dp"/>
                         <RadioButton
-                            android:text="B.如何交到新的朋友"
+                            android:id="@+id/title2_answerB"
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:id="@+id/radioButton7" />
+                            android:layout_height="30dp" />
                         <RadioButton
-                            android:text="C.学会和别人正确相处"
+                            android:id="@+id/title2_answerC"
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:id="@+id/radioButton8" />
+                            android:layout_height="30dp" />
 
                     </LinearLayout>
                 </LinearLayout>
-
                 <View
                     android:layout_width="360dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="5dp"
                     android:background="#C0C0C0"
                     android:layout_gravity="center" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -278,43 +243,32 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/text_three"
+                            android:id="@+id/question_title3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="10dp">
 
                         <RadioButton
-                            android:text="A.0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/radio1" />
+                            android:id="@+id/title3_answerA"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"/>
                         <RadioButton
-                            android:text="B.1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/radio2" />
+                            android:id="@+id/title3_answerB"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
                         <RadioButton
-                            android:text="C.2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/radio3" />
-                            </LinearLayout>
+                            android:id="@+id/title3_answerC"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
                     </LinearLayout>
                 </LinearLayout>
-
                 <View
                     android:layout_width="360dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="5dp"
                     android:background="#C0C0C0"
                     android:layout_gravity="center" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -333,25 +287,67 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/question_title4"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="（兴趣爱好）"
-                            android:textColor="#55BBCA"/>
-                        <CheckBox
-                            android:text="（1）完成读物阅读"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:id="@+id/title4_answerA"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/checkBox2" />
-                        <CheckBox
-                            android:text="（2）配合读中互动"
+                            android:layout_height="30dp"/>
+                        <RadioButton
+                            android:id="@+id/title4_answerB"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/checkBox3" />
-                        <CheckBox
-                            android:text="（3）有亲子活动意愿"
+                            android:layout_height="30dp" />
+                        <RadioButton
+                            android:id="@+id/title4_answerC"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/checkBox4" />
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="360dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#C0C0C0"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/number_two"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_title5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:id="@+id/title5_answerA"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"/>
+                        <RadioButton
+                            android:id="@+id/title5_answerB"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                        <RadioButton
+                            android:id="@+id/title5_answerC"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

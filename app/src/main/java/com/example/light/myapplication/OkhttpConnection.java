@@ -77,7 +77,7 @@ public class OkhttpConnection {
         Request request = new Request.Builder()
                 .url(baseurl+url)
                 .post(body)
-                .addHeader("user token",header)
+                .addHeader("token",header)
                 .build();
         Response response = client.newCall(request).execute();
         if (response.isSuccessful()) {
@@ -89,6 +89,16 @@ public class OkhttpConnection {
 
     public String get(String url) throws IOException {
         Request request = new Request.Builder().url(baseurl+url).get().build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
+    public String get(String url,String header) throws IOException {
+        Request request = new Request.Builder().url(baseurl+url).get().addHeader("token",header).build();
         Response response = client.newCall(request).execute();
         if (response.isSuccessful()) {
             return response.body().string();

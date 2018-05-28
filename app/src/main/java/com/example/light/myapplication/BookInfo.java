@@ -5,23 +5,39 @@ package com.example.light.myapplication;
  */
 
 public class BookInfo {
-    public String book_Imageurl;
-    public String book_name;
-    public String book_content;
-    public String book_tag;
-
+    public String bookname;
+    public float difficulty;
+    public float complexed1;
+    public float complexed2;
+    public Tag tag;
     public BookInfo(){}
 
-    public void setBook_Imageurl(String url){this.book_Imageurl = url;}
-    public String getBook_Imageurl(){return this.book_Imageurl;}
+    public void setBookname(String bookname){this.bookname = bookname;}
+    public String getBookname(){return this.bookname;}
 
-    public void setBook_name(String name){this.book_name = name;}
-    public String getBook_name(){return this.book_name;}
+    public void setDifficulty(float difficulty){this.difficulty = difficulty;}
+    public double getDifficulty(){return this.difficulty;}
 
-    public void setBook_content(String content){this.book_content = content;}
-    public String getBook_content(){return this.book_content;}
+    public void setComplexed1(float complexed1){this.complexed1 = complexed1;}
+    public double getComplexed1(){return this.complexed1;}
 
-    public void setBook_tag(String tag){this.book_tag = tag;}
-    public String getBook_tag(){return this.book_tag;}
+    public void setComplexed2(float complexed2){this.complexed2 = complexed2;}
+    public double getComplexed2(){return this.complexed2;}
 
+}
+class Tag{
+    public String tag1;
+    public String tag2;
+    public String tag3;
+
+    public Tag(){}
+
+    public void setTag1(String tag){this.tag1 = tag;}
+    public String getTag1(){return this.tag1;}
+
+    public void setTag2(String tag){this.tag2 = tag;}
+    public String getTag2(){return this.tag2;}
+
+    public void setTag3(String tag){this.tag3 = tag;}
+    public String getTag3(){return this.tag3;}
 }

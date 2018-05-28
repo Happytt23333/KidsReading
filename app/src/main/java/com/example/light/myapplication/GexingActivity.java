@@ -33,13 +33,13 @@ public class GexingActivity extends AppCompatActivity {
             username = userRead.getString("username");
             content1.append(username);
             content1.append("目前的认知能力（识字量）：");
-            content1.append(userRead.getString("ablityOne"));
+            content1.append(userRead.getString("ablity"));
             content2.append(username);
             content2.append("目前的理解能力（内容理解）：");
-            content2.append(userRead.getString("ablityTwo"));
+            content2.append(userRead.getString("ablity"));
             content3.append(username);
             content3.append("目前的迁移能力（生活运用）：");
-            content3.append(userRead.getString("ablityThree"));
+            content3.append(userRead.getString("ablity"));
         }catch(JSONException e){
             e.printStackTrace();
         }

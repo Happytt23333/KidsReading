@@ -37,6 +37,7 @@ public class RecordingActivity extends AppCompatActivity {
     public String bookname;
     public Questionnaire questionnaire;
     public String result;
+    public Handler handler = new Handler();
 
     public void setQuestionnaire(Questionnaire questionnaire){
         Log.d("quuuuuuuuuuuuuuu", "setQuestionnaire: ");
@@ -75,52 +76,59 @@ public class RecordingActivity extends AppCompatActivity {
                 setQuestionnaire(question);
                 Log.i("questionnaire", "dsfj");
                 Log.i("questionnaire", question.title.bookname);
-                TextView bookname = (TextView) findViewById(R.id.record_bookname);
-                bookname.setText(question.title.bookname);
-                TextView question_title1 = (TextView) findViewById(R.id.question_title1);
-                question_title1.setText(questionnaire.title.title1);
-                RadioButton title1_answerA = (RadioButton) findViewById(R.id.title1_answerA);
-                title1_answerA.setText("A." + questionnaire.answer.get(0).answerA);
-                RadioButton title1_answerB = (RadioButton) findViewById(R.id.title1_answerB);
-                title1_answerB.setText("B." + questionnaire.answer.get(0).answerB);
-                RadioButton title1_answerC = (RadioButton) findViewById(R.id.title1_answerC);
-                title1_answerC.setText("C." + questionnaire.answer.get(0).answerC);
+                Log.i("para1",questionnaire.title.title1);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        TextView bookname = (TextView) findViewById(R.id.record_bookname);
+                        bookname.setText(questionnaire.title.bookname);
+                        TextView question_title1 = (TextView) findViewById(R.id.question_title1);
+                        question_title1.setText(questionnaire.title.title1);
+                        RadioButton title1_answerA = (RadioButton) findViewById(R.id.title1_answerA);
+                        title1_answerA.setText("A." + questionnaire.answer.get(0).answerA);
+                        RadioButton title1_answerB = (RadioButton) findViewById(R.id.title1_answerB);
+                        title1_answerB.setText("B." + questionnaire.answer.get(0).answerB);
+                        RadioButton title1_answerC = (RadioButton) findViewById(R.id.title1_answerC);
+                        title1_answerC.setText("C." + questionnaire.answer.get(0).answerC);
 
-                TextView question_title2 = (TextView) findViewById(R.id.question_title2);
-                question_title2.setText(questionnaire.title.title2);
-                RadioButton title2_answerA = (RadioButton) findViewById(R.id.title2_answerA);
-                title2_answerA.setText("A." + questionnaire.answer.get(1).answerA);
-                RadioButton title2_answerB = (RadioButton) findViewById(R.id.title2_answerB);
-                title2_answerB.setText("B." + questionnaire.answer.get(1).answerB);
-                RadioButton title2_answerC = (RadioButton) findViewById(R.id.title2_answerC);
-                title2_answerC.setText("C." + questionnaire.answer.get(1).answerC);
+                        TextView question_title2 = (TextView) findViewById(R.id.question_title2);
+                        question_title2.setText(questionnaire.title.title2);
+                        RadioButton title2_answerA = (RadioButton) findViewById(R.id.title2_answerA);
+                        title2_answerA.setText("A." + questionnaire.answer.get(1).answerA);
+                        RadioButton title2_answerB = (RadioButton) findViewById(R.id.title2_answerB);
+                        title2_answerB.setText("B." + questionnaire.answer.get(1).answerB);
+                        RadioButton title2_answerC = (RadioButton) findViewById(R.id.title2_answerC);
+                        title2_answerC.setText("C." + questionnaire.answer.get(1).answerC);
 
-                TextView question_title3 = (TextView) findViewById(R.id.question_title3);
-                question_title3.setText(questionnaire.title.title3);
-                RadioButton title3_answerA = (RadioButton) findViewById(R.id.title3_answerA);
-                title3_answerA.setText("A." + questionnaire.answer.get(2).answerA);
-                RadioButton title3_answerB = (RadioButton) findViewById(R.id.title3_answerB);
-                title3_answerB.setText("B." + questionnaire.answer.get(2).answerB);
-                RadioButton title3_answerC = (RadioButton) findViewById(R.id.title3_answerC);
-                title3_answerC.setText("C." + questionnaire.answer.get(2).answerC);
+                        TextView question_title3 = (TextView) findViewById(R.id.question_title3);
+                        question_title3.setText(questionnaire.title.title3);
+                        RadioButton title3_answerA = (RadioButton) findViewById(R.id.title3_answerA);
+                        title3_answerA.setText("A." + questionnaire.answer.get(2).answerA);
+                        RadioButton title3_answerB = (RadioButton) findViewById(R.id.title3_answerB);
+                        title3_answerB.setText("B." + questionnaire.answer.get(2).answerB);
+                        RadioButton title3_answerC = (RadioButton) findViewById(R.id.title3_answerC);
+                        title3_answerC.setText("C." + questionnaire.answer.get(2).answerC);
 
-                TextView question_title4 = (TextView) findViewById(R.id.question_title4);
-                question_title4.setText(questionnaire.title.title4);
-                RadioButton title4_answerA = (RadioButton) findViewById(R.id.title4_answerA);
-                title4_answerA.setText("A." + questionnaire.answer.get(3).answerA);
-                RadioButton title4_answerB = (RadioButton) findViewById(R.id.title4_answerB);
-                title4_answerB.setText("B." + questionnaire.answer.get(3).answerB);
-                RadioButton title4_answerC = (RadioButton) findViewById(R.id.title4_answerC);
-                title4_answerC.setText("C." + questionnaire.answer.get(3).answerC);
+                        TextView question_title4 = (TextView) findViewById(R.id.question_title4);
+                        question_title4.setText(questionnaire.title.title4);
+                        RadioButton title4_answerA = (RadioButton) findViewById(R.id.title4_answerA);
+                        title4_answerA.setText("A." + questionnaire.answer.get(3).answerA);
+                        RadioButton title4_answerB = (RadioButton) findViewById(R.id.title4_answerB);
+                        title4_answerB.setText("B." + questionnaire.answer.get(3).answerB);
+                        RadioButton title4_answerC = (RadioButton) findViewById(R.id.title4_answerC);
+                        title4_answerC.setText("C." + questionnaire.answer.get(3).answerC);
 
-                TextView question_title5 = (TextView) findViewById(R.id.question_title5);
-                question_title5.setText(questionnaire.title.title5);
-                RadioButton title5_answerA = (RadioButton) findViewById(R.id.title5_answerA);
-                title5_answerA.setText("A." + questionnaire.answer.get(4).answerA);
-                RadioButton title5_answerB = (RadioButton) findViewById(R.id.title5_answerB);
-                title5_answerB.setText("B." + questionnaire.answer.get(4).answerB);
-                RadioButton title5_answerC = (RadioButton) findViewById(R.id.title5_answerC);
-                title5_answerC.setText("C." + questionnaire.answer.get(4).answerC);
+                        TextView question_title5 = (TextView) findViewById(R.id.question_title5);
+                        question_title5.setText(questionnaire.title.title5);
+                        RadioButton title5_answerA = (RadioButton) findViewById(R.id.title5_answerA);
+                        title5_answerA.setText("A." + questionnaire.answer.get(4).answerA);
+                        RadioButton title5_answerB = (RadioButton) findViewById(R.id.title5_answerB);
+                        title5_answerB.setText("B." + questionnaire.answer.get(4).answerB);
+                        RadioButton title5_answerC = (RadioButton) findViewById(R.id.title5_answerC);
+                        title5_answerC.setText("C." + questionnaire.answer.get(4).answerC);
+                    }
+                });
+
             }
         }).start();
         Log.i("questionnaire", "yuxiao2");

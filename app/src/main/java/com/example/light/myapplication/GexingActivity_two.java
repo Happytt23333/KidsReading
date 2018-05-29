@@ -1,6 +1,7 @@
 package com.example.light.myapplication;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -25,8 +26,9 @@ public class GexingActivity_two extends AppCompatActivity {
     private ImageView tupian;
     private TextView shuming;
     private TextView content;
+    public String result;
     public  List<BookInfo> booklist;
-
+    public Handler handler = new Handler();
     public void setBooklist(List<BookInfo> booklist){
         this.booklist = booklist;
     }
@@ -39,16 +41,33 @@ public class GexingActivity_two extends AppCompatActivity {
             actionBar.hide();
         }
         Log.i("input","input");
+        shuming = (TextView)findViewById(R.id.shuming);
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                List<BookInfo> bookInfoList = getBook(1f);
-                shuming = (TextView)findViewById(R.id.shuming);
-                shuming.setText(bookInfoList.get(0).bookname);
+                try{
+                    OkhttpConnection okhttpConnection = new OkhttpConnection();
+                    Log.i("request","request");
+                    result = okhttpConnection.get("/book");
+                    Log.i("request",result);
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+                List<BookInfo> bookInfoList = getBook(1f,result);
+                Log.i("book",bookInfoList.get(0).bookname);
+                setBooklist(bookInfoList);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        TextView bookname = (TextView)findViewById(R.id.shuming);
+                        bookname.setText(booklist.get(0).bookname);
+                    }
+                });
+
             }
         }).start();
 
-        Log.i("output","output");
         tupian = (ImageView)findViewById(R.id.tupian);
         content = (TextView)findViewById(R.id.content);
 
@@ -72,15 +91,13 @@ public class GexingActivity_two extends AppCompatActivity {
         });
     }
 
-    private List<BookInfo> getBook(float ablity){
+    private List<BookInfo> getBook(float ablity,String result){
         List<BookInfo> bookInfo = new ArrayList<>();
         float probability;
         float para1;
         float para2;
         float para3;
         try{
-            OkhttpConnection okhttpConnection = new OkhttpConnection();
-            String result = okhttpConnection.get("/book");
             JSONObject json = new JSONObject(result);
             Log.i("request","request success");
             Iterator iterator = json.keys();
@@ -104,6 +121,7 @@ public class GexingActivity_two extends AppCompatActivity {
                         book.tag = tag;
 
                         book.bookname = json.getJSONObject(keys).getString("bookname");
+
                         book.difficulty = para1;
                         book.complexed1 = para2;
                         book.complexed2 = para3;
@@ -112,12 +130,10 @@ public class GexingActivity_two extends AppCompatActivity {
                 }else {
                 }
             }
-        }catch(IOException e){
-            e.printStackTrace();
         }catch(JSONException e){
             e.printStackTrace();
         }
         return bookInfo;
-    }
-
 }
+
+        }

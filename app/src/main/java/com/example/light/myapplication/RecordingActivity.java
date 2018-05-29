@@ -3,6 +3,7 @@ package com.example.light.myapplication;
 import android.content.Intent;
 import android.graphics.Color;
 import android.icu.text.AlphabeticIndex;
+import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -120,11 +121,11 @@ public class RecordingActivity extends AppCompatActivity {
                 title5_answerB.setText("B." + questionnaire.answer.get(4).answerB);
                 RadioButton title5_answerC = (RadioButton) findViewById(R.id.title5_answerC);
                 title5_answerC.setText("C." + questionnaire.answer.get(4).answerC);
-        }
-    }).start();
-    Log.i("questionnaire", "yuxiao2");
-    TextView recording_finish = (TextView) findViewById(R.id.recording_finish);
-    recording_finish.setOnClickListener(new View.OnClickListener() {
+            }
+        }).start();
+        Log.i("questionnaire", "yuxiao2");
+        TextView recording_finish = (TextView) findViewById(R.id.recording_finish);
+        recording_finish.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             new Thread(new Runnable() {
@@ -225,7 +226,7 @@ public class RecordingActivity extends AppCompatActivity {
                     Log.i("wt1","success");
                     JSONObject obj1 = jsonObject.getJSONObject(keys).getJSONObject("title");
                     Title title = new Title();
-                    title.setBookname(titleName);
+                    title.setBookname(obj1.getString("bookname"));
                     title.setTitle1(obj1.getString("title1"));
                     title.setTitle2(obj1.getString("title2"));
                     title.setTitle3(obj1.getString("title3"));
